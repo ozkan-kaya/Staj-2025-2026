@@ -1,0 +1,3 @@
+box-sizing border-box belirlenen width ve height degerini gecmez
+margin auto yatayda ortalar
+overflow scrollbar kaydirilabilir yapar, overflow-x: hidden; x'teki scroll bar kaldirir

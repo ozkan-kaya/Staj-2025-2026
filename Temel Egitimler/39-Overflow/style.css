@@ -1,0 +1,19 @@
+.box {
+    width: 200px;
+    /*height: 200px;*/
+    border: 2px solid blue;
+    border-radius: 20px;
+    box-shadow: 0 0 10px deepskyblue;
+
+    /* overflow olunca kaydirilabilir yapmak icin
+    overflow: scroll;
+    overflow-x: hidden;
+     */
+
+    /* 3. satirdan sonra ... koymak icin */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
