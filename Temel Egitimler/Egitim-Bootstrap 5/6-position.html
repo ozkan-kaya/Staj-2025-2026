@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        div {
+            min-height: 200px;
+            min-width: 200px;
+            margin: 20px;
+        }
+
+        body {
+            min-height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="position-relative bg-info rounded-3" style="height: 600px;">
+        <div class="border border-3 rounded-3 position-absolute top-0 start-0 text-white text-center">test1</div>
+        <div class="border border-3 rounded-3 position-absolute bottom-0 start-0 text-white text-center">test2</div>
+        <div class="border border-3 rounded-3 position-absolute bottom-0 end-0 text-white text-center">test3</div>
+        <div class="border border-3 rounded-3 position-absolute top-0 end-0 text-white text-center">test4</div>
+        <div class="border border-3 rounded-3 position-absolute top-50 start-50 translate-middle text-white text-center">test5</div>
+    </div>
+    <div class="border border-3 rounded-3 bg-primary position-fixed bottom-0 start-50 translate-middle text-white text-center">test6</div>
+    <div class="shadow-none p-3 mb-5 bg-light rounded-3">No shadow</div>
+    <div class="shadow-sm p-3 mb-5 bg-body rounded-3">Small shadow</div>
+    <div class="shadow p-3 mb-5 bg-body rounded-3">Regular shadow</div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded-3">Large shadow</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
