@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         div {
-            min-height: 200px;
-            min-width: 200px;
-            margin: 20px;
+            background-color: skyblue;
+            margin: 10px;
         }
 
         body {
@@ -20,7 +19,24 @@
     </style>
 </head>
 <body>
+    <div class="w-25 p-3">Width 25%</div>
+    <div class="w-50 p-3">Width 50%</div>
+    <div class="w-75 p-3">Width 75%</div>
+    <div class="w-100 p-3">Width 100%</div>
+    <div class="w-auto p-3">Width auto</div>
 
+    <div style="height: 100px; background-color: blue">
+        <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(255,255,255,0.7);">Height 25%</div>
+        <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(255,255,255,0.7);">Height 50%</div>
+        <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(255,255,255,0.7);">Height 75%</div>
+        <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(255,255,255,0.7);">Height 100%</div>
+        <div class="h-auto d-inline-block" style="width: 120px; background-color: rgba(255,255,255,0.7);">Height auto</div>
+    </div>
+
+    <div class="min-vw-100">Min-width 100vw</div>
+    <div class="min-vh-100">Min-height 100vh</div>
+    <div class="vw-100">Width 100vw</div>
+    <div class="vh-100">Height 100vh</div>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
