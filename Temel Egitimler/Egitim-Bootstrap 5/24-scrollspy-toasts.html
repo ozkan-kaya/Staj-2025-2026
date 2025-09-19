@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            min-height: 2000px;
+        }
+
+    </style>
+</head>
+<body>
+<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">First</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+    <h4 id="scrollspyHeading1">First heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium animi consequuntur corporis cupiditate error, fugit incidunt inventore ipsam ipsum labore officiis, optio placeat porro rerum soluta voluptatem. Excepturi, nesciunt?</p>
+    <h4 id="scrollspyHeading2">Second heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi hic obcaecati porro vel. Asperiores atque, cupiditate deserunt dolorem eaque in officia quaerat quidem voluptatem. Commodi earum maiores nulla veritatis voluptates.</p>
+    <h4 id="scrollspyHeading3">Third heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, cum dignissimos distinctio, eius enim esse expedita facere iure non odit omnis optio provident quidem reprehenderit soluta tenetur totam veritatis voluptas?</p>
+    <h4 id="scrollspyHeading4">Fourth heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae consectetur, exercitationem facere in laborum nemo provident veritatis. Adipisci assumenda impedit in labore libero nesciunt praesentium quidem reiciendis. Eius, optio, placeat.</p>
+    <h4 id="scrollspyHeading5">Fifth heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad eius iure nemo odio, optio perspiciatis quasi quibusdam quo vero. Aliquid deserunt facere hic obcaecati quae, ut! Commodi, illum nobis.</p>
+</div>
+
+<!--TOAST NOTIFICATIONS-->
+<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toastTrigger = document.getElementById('liveToastBtn');
+        const toastLiveExample = document.getElementById('liveToast');
+
+        if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show();
+            });
+        }
+    });
+</script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
