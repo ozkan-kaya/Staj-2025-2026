@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    body {
+      min-height: 2000px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <form>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Sifre</label>
+          <input type="password" class="form-control">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <label class="form-label">Adres</label>
+          <input type="text" class="form-control" placeholder="Sehir, ilce, mahalle">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <label class="form-label">Adres Satiri 2</label>
+          <input type="text" class="form-control" placeholder="Apartman, no, kat">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Ulke</label>
+          <select class="form-select">
+            <option selected disabled value="">Ulke seciniz.</option>
+            <option value="tr">Turkiye</option>
+            <option value="us">ABD</option>
+            <option value="ger">Almanya</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Konum</label>
+          <select class="form-select">
+            <option selected disabled value="">Konum seciniz.</option>
+            <option value="tr">Kuzey</option>
+            <option value="us">Guney</option>
+            <option value="ger">Bati</option>
+            <option value="ger">Dogu</option>
+          </select>
+        </div>
+
+        <div class="col-md-2">
+          <label class="form-label">Zip Kodu</label>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <div class="form-check">
+            <a href="#">Kullanim kosullarini</a>
+            <input type="checkbox" class="form-check-input">
+            <label class="form-label">okudum, kabul ediyorum.</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-12">
+          <button class="btn btn-primary">Kaydol</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
