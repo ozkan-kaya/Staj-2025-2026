@@ -17,6 +17,14 @@
         #username {
             margin-bottom: 10px;
         }
+
+        .success {
+            border: 1px solid lime;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
     </style>
 </head>
 <body>
@@ -25,6 +33,7 @@
 </div>
 <form class="signupForm">
     <input type="text" id="username" name="username" placeholder="Kullanici adinizi giriniz">
+    <div class="message"></div>
     <input type="submit" value="Kaydet">
 </form>
 
