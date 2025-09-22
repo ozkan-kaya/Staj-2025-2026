@@ -1,10 +1,16 @@
-const baslik = document.querySelector('h1');
+const icerik = document.querySelector('p');
+icerik.classList.add('test123');
+console.log(icerik.classList);
+icerik.classList.remove('error');
+console.log(icerik.classList);
 
-// baslik.setAttribute('style', 'padding: 50px;');
-// bu yontem eski stylelari silip sonuncuyu yazdigi icin asagidaki yontemi uygulamamiz gerekir
+const pDegerleri = document.querySelectorAll('p');
 
-console.log(baslik.style);
-
-baslik.style.padding = '50px';
-baslik.style.fontSize = '60px';
-baslik.style.fontWeight = '100';
+pDegerleri.forEach(pDegeri => {
+    if (pDegeri.textContent.includes('error')) {
+        pDegeri.classList.add('error');
+    }
+    if (pDegeri.textContent.includes('success')) {
+        pDegeri.classList.add('success');
+    }
+})
