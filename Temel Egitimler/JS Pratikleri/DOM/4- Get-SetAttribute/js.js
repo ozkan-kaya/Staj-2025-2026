@@ -1,23 +1,10 @@
-// const pDegeri = document.querySelector('p');
-// console.log(pDegeri.innerText);
-//
-// pDegeri.innerText = 'Ozkan kaya fullstack training';
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
+link.innerText = 'W3Schools';
+link.setAttribute('href', 'https://www.w3schools.com/');
 
-
-// const pDegeri = document.querySelectorAll('p');
-//
-// pDegeri.forEach(p => {
-//     console.log(p.innerText);
-//     p.innerText += ' eski deger. [yeni deger]';
-// })
-
-
-const icerik = document.querySelector('.icerik');
-console.log(icerik);
-
-icerik.innerHTML += '<h2>Vue JS, React JS, Angilar JS</h2>';
-
-const ogrenciler = ['can','ozkan','ayse'];
-ogrenciler.forEach(ogrenci => {
-    icerik.innerHTML += `<p>${ogrenci}</p>`;
-})
+const pDegeri = document.querySelector('p');
+console.log(pDegeri.getAttribute('class'));
+pDegeri.setAttribute('class', 'yeniIcerik')
+console.log(pDegeri.getAttribute('class'));
+pDegeri.setAttribute('style', 'color: blueviolet;')
