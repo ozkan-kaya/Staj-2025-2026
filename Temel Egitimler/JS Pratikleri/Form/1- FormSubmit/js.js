@@ -1,17 +1,9 @@
-const button = document.querySelector('button');
-const mainPopup = document.querySelector('.main-popup');
-const close = document.querySelector('.popup-close');
+const form = document.querySelector('.signupForm');
+const username = document.querySelector('#username');
 
-button.addEventListener('click', () => {
-    mainPopup.style.display = 'block';
-})
-
-close.addEventListener('click', () => {
-    mainPopup.style.display = 'none';
-})
-
-mainPopup.addEventListener('click', (e) => {
-    if (e.target.className === 'main-popup') {
-        mainPopup.style.display = 'none';
-    }
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // console.log('Form gonderildi');
+    // console.log(username.value);
+    console.log(form.username.value);
 })
