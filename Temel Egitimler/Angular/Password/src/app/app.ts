@@ -14,6 +14,16 @@ export class App {
   includeNumbers: boolean = false;
   includeSymbols: boolean = false;
 
+  modifyLength(value:string) {
+    const parsedLength = parseInt(value);
+
+    if (isNaN(parsedLength)) {
+      this.length = 0;
+    }
+    else
+      this.length = parsedLength;
+  }
+
   modifyLetters() {
     this.includeLetters = !this.includeLetters;
     console.log('include letters:',this.includeLetters);
@@ -27,14 +37,6 @@ export class App {
   modifySymbols() {
     this.includeSymbols = !this.includeSymbols;
     console.log('include symbols:',this.includeSymbols);
-  }
-
-  modifyLength(value:string) {
-    const parsedValue = parseInt(value);
-
-    if (!isNaN(parsedValue)) {
-      this.length = parsedValue;
-    }
   }
 
   buttonClick() {

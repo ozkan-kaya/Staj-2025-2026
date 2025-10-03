@@ -1,6 +1,6 @@
-.mainArea {
+.main {
   display: flex;
   justify-content: center;
+  min-height: 800px;
   align-items: center;
-  min-height: 900px;
 }
