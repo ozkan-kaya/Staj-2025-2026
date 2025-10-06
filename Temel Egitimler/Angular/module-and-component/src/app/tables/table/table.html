@@ -1,0 +1,18 @@
+<table class="ui celled table">
+  <thead>
+  <tr>
+    @for (header of headers; track $index){
+    <th>{{ header.label }}</th>
+    }
+  </tr>
+  </thead>
+  <tbody>
+    @for (record of data; track $index){
+      <tr>
+        @for (header of headers; track header.key) {
+        <td>{{ formatValue(header.key, record[header.key]) }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>
