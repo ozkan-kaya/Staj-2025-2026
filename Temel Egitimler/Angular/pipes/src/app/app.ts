@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, TitleCasePipe} from '@angular/common';
+import {ConvertToKMPipe} from './convert-to-km-pipe';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import {CurrencyPipe, DatePipe, DecimalPipe, JsonPipe, TitleCasePipe} from '@ang
     CurrencyPipe,
     DecimalPipe,
     JsonPipe,
+    ConvertToKMPipe,
 
   ],
   styleUrl: './app.css'
@@ -19,6 +21,7 @@ export class App {
   date = '';
   price: number = 0;
   height: number = 0;
+  miles: number = 0;
 
   lessons = {
     name: 'Math',
@@ -42,4 +45,7 @@ export class App {
     this.height = parseFloat(value);
   }
 
+  onMilesChange(value: string) {
+    this.miles = parseFloat(value);
+  }
 }
