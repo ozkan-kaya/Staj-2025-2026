@@ -1,0 +1,41 @@
+<div class="container">
+  <nav>
+    <ul class="pagination pagination-ul">
+      <li class="page-item" [ngClass]="{disabled: currentPage === 0}">
+        <a class="page-link" (click)="currentPage -= 1">Previous</a>
+      </li>
+
+        @for (image of images; track $index) {
+          @if (pageIndex($index)) {
+            <li class="page-item" [ngClass]="{active:$index === currentPage}">
+              <a class="page-link" (click)="currentPage = $index">{{$index + 1}}</a>
+            </li>
+          }
+        }
+
+      <li class="page-item" [ngClass]="{disabled: currentPage === images.length - 1}">
+        <a class="page-link" (click)="currentPage += 1">Next</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- [ngClass]="{active:$index === currentPage}" --->
+  <!-- [ngClass]="$index === currentPage ? 'active' : 'passive' --->
+
+  <div class="mainImg">
+    <p class="display-4" appFirst [backgroundColor]="'deepskyblue'">{{images[currentPage].title}}</p>
+    <img src="{{images[currentPage].url}}" />
+  </div>
+
+  @switch (currentPage) {
+    @case (0){
+      <p class="display-5 text-center my-3">Ilk sayfadasin</p>
+    }
+    @case (images.length - 1){
+      <p class="display-5 text-center my-3">Sonuncu sayfadasin</p>
+    }
+    @default {
+      <p class="display-5 text-center my-3">{{currentPage + 1}}. sayfadasin</p>
+    }
+  }
+
+</div>

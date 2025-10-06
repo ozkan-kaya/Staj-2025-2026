@@ -1,0 +1,20 @@
+.pagination-ul {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.mainImg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.mainImg img {
+  max-height: 500px;
+}
+
+.page-link {
+  cursor: pointer;
+}
