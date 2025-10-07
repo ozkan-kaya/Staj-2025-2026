@@ -1,0 +1,5 @@
+<app-divider>Pop-up</app-divider>
+<button (click)="onClick()" class="ui button">Modal</button>
+@if (modalOpen) {
+  <app-modal (close)="onClick()"></app-modal>
+}
