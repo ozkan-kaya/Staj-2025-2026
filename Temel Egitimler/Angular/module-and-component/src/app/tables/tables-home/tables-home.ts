@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Divider} from '../../shared/divider/divider';
 import {Table} from '../table/table';
-import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {Tabs} from '../tabs/tabs';
 
 @Component({
@@ -9,10 +9,9 @@ import {Tabs} from '../tabs/tabs';
   imports: [
     Divider,
     Table,
-    RouterOutlet,
     RouterLink,
     RouterLinkActive,
-    Tabs
+    Tabs,
   ],
   templateUrl: './tables-home.html',
   styleUrl: './tables-home.css'

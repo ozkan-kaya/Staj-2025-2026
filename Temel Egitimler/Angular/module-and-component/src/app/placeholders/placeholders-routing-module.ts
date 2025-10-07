@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PopupsHome} from './popups-home/popups-home';
+import {PlaceholdersHome} from './placeholders-home/placeholders-home';
 
 const routes: Routes = [
-  {path: '', component: PopupsHome},
+  {path:'', component: PlaceholdersHome }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PopupsRoutingModule { }
+export class PlaceholdersRoutingModule { }
