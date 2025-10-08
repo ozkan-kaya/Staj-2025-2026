@@ -1,0 +1,11 @@
+.card-image {
+  width: 200px;
+  display: block;
+  margin: 0 auto
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-image {
+    filter: invert(1);
+  }
+}

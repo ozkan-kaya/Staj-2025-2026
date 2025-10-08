@@ -1,0 +1,22 @@
+<div class="field">
+  <label class="label">{{ label }}</label>
+  <div class="control">
+    <input class="input" type="text" [formControl]="control" [ngClass]="{'is-danger': !isValid()}">
+    @if (!isValid()) {
+      @if (control?.errors?.['required']) {
+        <div class="help is-danger">Zorunlu alan</div>
+      }
+      @if (control?.errors?.['minlength']) {
+        <div class="help is-danger">Girdiginiz deger {{ control?.errors?.['minlength']?.['actualLength'] }} karakterlidir.
+          Min {{ control?.errors?.['minlength']?.['requiredLength'] }} karakter icermelidir.</div>
+      }
+      @if (control?.errors?.['maxlength']) {
+        <div class="help is-danger">Girdiginiz deger {{ control?.errors?.['maxlength']?.['actualLength'] }} karakterlidir.
+          Max {{ control?.errors?.['maxlength']?.['requiredLength'] }} karakter icermelidir.</div>
+      }
+      @if (control?.errors?.['pattern']) {
+        <div class="help is-danger">Girdiginiz deger uygun formatta degildir (MM/YY).</div>
+      }
+    }
+  </div>
+</div>

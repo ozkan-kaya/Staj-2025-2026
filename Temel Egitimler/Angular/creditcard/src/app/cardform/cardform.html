@@ -1,0 +1,19 @@
+<div class="container">
+  <img src="credit-card.png" class="card-image" alt="Kart">
+  <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+    <app-input-field label="Ad Soyad" [control]="nameControl"></app-input-field>
+    <app-input-field label="Kart Numarasi" [control]="cardControl"></app-input-field>
+    <div class="columns">
+      <div class="column">
+        <app-input-field label="Son Kullanma Tarihi" [control]="expirationControl"></app-input-field>
+      </div>
+      <div class="column">
+        <app-input-field label="Guvenlik Kodu" [control]="cvvControl"></app-input-field>
+      </div>
+    </div>
+    <div class="buttons is-display-flex is-justify-content-end">
+      <button class="button is-family-secondary" type="reset" (click)="resetForm()">Temizle</button>
+      <button class="button is-primary has-text-white" type="submit" [disabled]="cardForm.invalid">Kaydet</button>
+    </div>
+  </form>
+</div>
